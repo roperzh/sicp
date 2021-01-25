@@ -17,7 +17,7 @@
     (if (> a b)
       result
       (iter (next a) (combiner result (term a)))))
-  (iter a null-value)))
+  (iter a null-value))
 
 (define (sum term a next b)
   (define (combiner x y) (+ x y))
