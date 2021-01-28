@@ -19,13 +19,6 @@
 ; with the sample tree and seeing whether it is the same as the original sample
 ; message.
 
-;start at the root, move down until we find a _leaf_ that holds the
-;symbol
-; if we move down a left branch: add 0
-; if we move down a right branch: add 1
-; decide with branch to follow by testing to see which branch eiter is the
-; leaf node for the symol or contains the symbol in its set
-
 (define (move-right? tree symbol)
   (let ((right (symbols (right-branch tree))))
       (memq symbol right)))

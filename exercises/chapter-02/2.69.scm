@@ -19,7 +19,14 @@
 ; representation.)
 
 (define (successive-merge pairs)
-  (display pairs))
+  (newline)
+  (display (length pairs))
+  (display pairs)
+  (cond ((= (length pairs) 1) (car pairs))
+        (else (make-code-tree
+                (car pairs)
+                (successive-merge (cdr pairs))))))
 
-(generate-huffman-tree '((A 4) (B 2) (D 1) (C 1)))
+(define t '((A 4) (B 2) (D 1) (C 1)))
+(generate-huffman-tree t)
 
